@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Todo List App</title>
+</head>
+<body>
+    <!-- Seccción Header -->
+    <header>
+        <h1>My Time App</h1>
+    </header>
+
+    <!-- Creamos Sección Task -->
+    <section id="create-task">
+        <h2>Nueva tarea</h2>
+        <form id="task-form">
+            <input type="date" id="task-date" required aria-label="Fecha de la tarea">
+            <input type="time" id="task-time" required aria-label="Hora de la tarea">
+            <input type="text" id="task-title" placeholder="Título de la tarea" required aria-label="Título de la tarea">
+            <textarea id="task-description" placeholder="Agrega descripción" rows="4" required aria-label="Descripción de la tarea"></textarea>
+            <button type="submit">Agrega tarea</button>
+        </form>
+    </section>
+
+    <!-- Listado Sección Task -->
+    <section id="tasks-list">
+        <h2>Todas las tareas</h2>
+        <ul id="tasks-container" aria-label="Lista de tareas"></ul>
+    </section>
+
+    <!-- Editar Sección Task -->
+    <section id="edit-task" hidden>
+        <h2>Edita tu tarea</h2>
+        <form id="edit-task-form">
+            <input type="text" id="edit-task-title" placeholder="Título de la tarea" required aria-label="Editar título de tarea">
+            <textarea id="edit-task-description" placeholder="Descripción de la tarea" rows="4" required aria-label="Editar descripción de tarea"></textarea>
+            <button type="submit">Guarda los cambios</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
