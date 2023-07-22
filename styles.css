@@ -10,14 +10,12 @@
 .header-container img {
     width: 100px; /* Tamaño deseado de la imagen */
     height: auto; /* Ajustar la altura proporcionalmente al ancho */
-    border: 1px solid red;
+    border: 1px solid green;
 }
 
 header {
     margin-right: 1rem; /* Espacio entre el encabezado y la imagen */
 }
-
-
 
 body, h1, h2, ul {
     margin: 10;
