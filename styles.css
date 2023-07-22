@@ -10,6 +10,7 @@
 .header-container img {
     width: 100px; /* Tamaño deseado de la imagen */
     height: auto; /* Ajustar la altura proporcionalmente al ancho */
+    border: 1px solid red;
 }
 
 header {
