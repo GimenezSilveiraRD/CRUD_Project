@@ -1,25 +1,6 @@
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    background-color: #4CAF50;
-    color: #fff;
-}
-
-.header-container img {
-    width: 100px; /* Tamaño deseado de la imagen */
-    height: auto; /* Ajustar la altura proporcionalmente al ancho */
-    border: 1px solid green;
-}
-
-header {
-    margin-right: 1rem; /* Espacio entre el encabezado y la imagen */
-}
-
 body, h1, h2, ul {
-    margin: 10;
-    padding: 10;
+    margin: 1em;
+    padding: 1em;
 }
 
 body {
@@ -29,11 +10,28 @@ body {
     line-height: 1.6;
 }
 
-header {
-    background: #4CAF50;
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #4CAF50;
     color: #fff;
+}
+
+.header-container img {
+    max-width: 10%; /* Tamaño responsivo de la imagen */
+    max-height: 10%;
+    height: auto;
+    border: 1px solid green;
+    margin-top: 1rem; /* Espacio entre el encabezado y la imagen */
+}
+
+header {
+    width: 100%;
     text-align: center;
-    padding: 1rem 0;
+    padding: 0.5rem;
 }
 
 section {
@@ -42,15 +40,12 @@ section {
 
 form {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     margin: 0 auto;
     max-width: 500px;
 }
 
 input, textarea {
-    flex: 1 1 200px;
     margin: 0.5rem;
     padding: 0.5rem;
     font-size: 1rem;
@@ -58,7 +53,6 @@ input, textarea {
 }
 
 button {
-    flex: 1 1 200px;
     margin: 0.5rem;
     padding: 0.5rem;
     font-size: 1rem;
@@ -88,6 +82,32 @@ ul {
     color: #fff;
     text-align: center;
     margin-top: 200px;
+}
+
+@media screen and (min-width: 600px) {
+    .header-container {
+        justify-content: space-between;
+    }
+
+    header, .header-container img {
+        width: auto;
+        margin: 0;
+    }
+
+    form {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    form {
+        justify-content: space-between;
+    }
+
+    input, textarea, button {
+        flex: 1 1 200px;
+    }
 }
 
 
